@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Action for the model -->
+  <record id="action_report_model" model="ir.actions.act_window">
+    <field name="name">Monthly Report</field>
+    <field name="res_model">monthly_report.report</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <!-- Tree View (List View) -->
+  <record id="view_my_simple_model_tree" model="ir.ui.view">
+    <field name="name">monthly_report.report.tree</field>
+    <field name="model">monthly_report.report</field>
+    <field name="arch" type="xml">
+      <tree string="Report Records">
+        <field name="name" />
+      </tree>
+    </field>
+  </record>
+
+  <!-- Form View -->
+  <record id="view_my_simple_model_form" model="ir.ui.view">
+    <field name="name">monthly_report.report.form</field>
+    <field name="model">monthly_report.report</field>
+    <field name="arch" type="xml">
+      <form string="Report Record">
+        <sheet>
+          <group>
+            <field name="name" />
+            <!-- Add other fields here if you add them to the model -->
+          </group>
+          <!-- Button to preview the report -->
+          <button name="action_open_monthly_report_preview" type="object" string="Preview Report" class="oe_highlight"/>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!-- Menu Item -->
+  <menuitem id="menu_monthly_report_module_root"
+    name="Monthly Report"
+    sequence="10" /> <!-- Adjust sequence to control menu order -->
+
+  <menuitem id="menu_monthly_report_model_records"
+    name="Report"
+    parent="menu_monthly_report_module_root"
+    action="action_report_model"
+    sequence="10" />
+
+  <!-- Report Action -->
+  <record id="action_report_monthly_report" model="ir.actions.report">
+    <field name="name">Monthly Report PDF</field>
+    <field name="model">monthly_report.report</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">monthly_report.report_monthly_report_custom_document</field>
+    <field name="report_file">monthly_report.report_monthly_report_custom_document</field>
+    <field name="print_report_name">'Monthly Report - %s' % (object.name)</field>
+    <field name="binding_model_id" ref="model_monthly_report_report" />
+    <field name="binding_type">report</field>
+  </record>
+
+</odoo>

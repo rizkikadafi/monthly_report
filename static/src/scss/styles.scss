@@ -1,0 +1,162 @@
+$color_1: #a0cbff;
+$color_2: #213a56;
+$font-family_1: "Inter", sans-serif;
+$background-color_1: #a0cbff;
+$background-color_2: #5380cb;
+$background-color_3: #f3f7f9;
+$background-color_4: #f3f9ff;
+$background-color_5: #e9f1ff;
+$background-color_6: #e58383;
+$background-color_7: #ffa824;
+$background-color_8: #30ba95;
+$background-color_9: #896db7;
+$background-color_10: #7ed957;
+
+@page {
+  size: A4 portrait;
+  margin-top: 2cm;
+}
+
+@media print {
+  canvas {
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+  }
+
+  body {
+    width: 21cm;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-family: $font-family_1;
+    line-height: 1.4;
+  }
+
+  section {
+    page-break-inside: avoid !important;
+    margin-bottom: 0.5cm !important;
+  }
+}
+
+html {
+  font-family: $font-family_1 !important;
+}
+
+body {
+  font-family: $font-family_1 !important;
+}
+
+.header-gradient-bg {
+  background: linear-gradient(90deg, #2e3d59, #0f1c31);
+}
+
+.progress-gradient-bg {
+  background: linear-gradient(90deg, #ffffffff, #f1ffe6);
+}
+
+.red-gradient-bg {
+  background: linear-gradient(90deg, #ffffffff, #ffe7e6);
+}
+
+.blue-gradient-bg {
+  background: linear-gradient(180deg, #ffffffff, #d4ebfb);
+}
+
+.yellow-gradient-bg {
+  background: linear-gradient(180deg, #ffffffff, #fff8cb);
+}
+
+.text-a0cbff {
+  color: $color_1;
+}
+
+.text-213a56 {
+  color: $color_2;
+}
+
+.bg-a0cbff {
+  background-color: $background-color_1;
+}
+
+.bg-5380cb {
+  background-color: $background-color_2;
+}
+
+.bg-f3f7f9 {
+  background-color: $background-color_3;
+}
+
+.bg-f3f9ff {
+  background-color: $background-color_4;
+}
+
+.bg-e9f1ff {
+  background-color: $background-color_5;
+}
+
+.bg-e58383 {
+  background-color: $background-color_6;
+}
+
+.bg-ffa824 {
+  background-color: $background-color_7;
+}
+
+.bg-30ba95 {
+  background-color: $background-color_8;
+}
+
+.bg-896db7 {
+  background-color: $background-color_9;
+}
+
+.border-a0cbff {
+  outline: 1px solid #a0cbff;
+}
+
+.border-5ab69e {
+  outline: 1px solid #5ab69e;
+}
+
+.border-ffa824 {
+  outline: 1px solid #ffa824;
+}
+
+.border-5380cb {
+  outline: 1px solid #5380cb;
+}
+
+.border-e58383 {
+  outline: 1px solid #e58383;
+}
+
+.doughnut {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(#5380cb 0% 65%, #ffa824 65% 95%, #30ba95 95% 98%);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background: white;
+    border-radius: 50%;
+  }
+}
+
+.green-border-bottom {
+  width: 100%;
+  height: 0.2cm;
+  background-color: $background-color_10;
+  opacity: 0.4;
+  position: absolute;
+  left: -0.05cm;
+  bottom: -0.1cm;
+  z-index: 0;
+}
