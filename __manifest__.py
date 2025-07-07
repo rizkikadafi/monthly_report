@@ -14,7 +14,6 @@
     "application": True,
     "assets": {
         "web.report_assets_common": [
-            "monthly_report/static/src/scss/styles.scss",
             "monthly_report/static/src/css/styles.css",
         ],
     },
