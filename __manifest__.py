@@ -7,7 +7,6 @@
     ],
     "data": [
         "views/monthly_report_views.xml",
-        "views/monthly_report_report_templates.xml",
         "views/monthly_report_custom_report.xml",
         "security/ir.model.access.csv",
     ],
@@ -16,6 +15,7 @@
     "assets": {
         "web.report_assets_common": [
             "monthly_report/static/src/scss/styles.scss",
+            "monthly_report/static/src/css/styles.css",
         ],
     },
     "license": "LGPL-3",

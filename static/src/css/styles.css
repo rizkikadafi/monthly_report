@@ -1,17 +1,3 @@
-$color_1: #a0cbff;
-$color_2: #213a56;
-$font-family_1: "Inter", sans-serif;
-$background-color_1: #a0cbff;
-$background-color_2: #5380cb;
-$background-color_3: #f3f7f9;
-$background-color_4: #f3f9ff;
-$background-color_5: #e9f1ff;
-$background-color_6: #e58383;
-$background-color_7: #ffa824;
-$background-color_8: #30ba95;
-$background-color_9: #896db7;
-$background-color_10: #7ed957;
-
 @page {
   size: A4 portrait;
   margin-top: 2cm;
@@ -25,11 +11,12 @@ $background-color_10: #7ed957;
 
   body {
     width: 21cm;
+    /* A4 width */
     margin: 0;
     padding: 0;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    font-family: $font-family_1;
+    font-family: "Inter", sans-serif;
     line-height: 1.4;
   }
 
@@ -39,12 +26,9 @@ $background-color_10: #7ed957;
   }
 }
 
-html {
-  font-family: $font-family_1 !important;
-}
-
+html,
 body {
-  font-family: $font-family_1 !important;
+  font-family: "Inter", sans-serif !important;
 }
 
 .header-gradient-bg {
@@ -68,47 +52,47 @@ body {
 }
 
 .text-a0cbff {
-  color: $color_1;
+  color: #a0cbff;
 }
 
 .text-213a56 {
-  color: $color_2;
+  color: #213a56;
 }
 
 .bg-a0cbff {
-  background-color: $background-color_1;
+  background-color: #a0cbff;
 }
 
 .bg-5380cb {
-  background-color: $background-color_2;
+  background-color: #5380cb;
 }
 
 .bg-f3f7f9 {
-  background-color: $background-color_3;
+  background-color: #f3f7f9;
 }
 
 .bg-f3f9ff {
-  background-color: $background-color_4;
+  background-color: #f3f9ff;
 }
 
 .bg-e9f1ff {
-  background-color: $background-color_5;
+  background-color: #e9f1ff;
 }
 
 .bg-e58383 {
-  background-color: $background-color_6;
+  background-color: #e58383;
 }
 
 .bg-ffa824 {
-  background-color: $background-color_7;
+  background-color: #ffa824;
 }
 
 .bg-30ba95 {
-  background-color: $background-color_8;
+  background-color: #30ba95;
 }
 
 .bg-896db7 {
-  background-color: $background-color_9;
+  background-color: #896db7;
 }
 
 .border-a0cbff {
@@ -137,23 +121,23 @@ body {
   border-radius: 50%;
   background: conic-gradient(#5380cb 0% 65%, #ffa824 65% 95%, #30ba95 95% 98%);
   position: relative;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    height: 50%;
-    background: white;
-    border-radius: 50%;
-  }
+.doughnut::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: white;
+  border-radius: 50%;
 }
 
 .green-border-bottom {
   width: 100%;
   height: 0.2cm;
-  background-color: $background-color_10;
+  background-color: #7ed957;
   opacity: 0.4;
   position: absolute;
   left: -0.05cm;
